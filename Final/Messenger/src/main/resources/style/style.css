@@ -1,0 +1,15 @@
+#backgroundPane{
+    -fx-background-color: linear-gradient( rgba(245,187,186,1) 0%, rgba(152,219,175,1) 100%);
+}
+#scrollPane{
+    -fx-background-color: transparent;
+
+}
+#vBox{
+    -fx-background-color: transparent;
+}
+#image{
+    -fx-background-radius: 50px;
+    -fx-border-radius: 50px;
+    -fx-border-width: 5px;
+}

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="727.0" prefWidth="818.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainFormController">
+   <children>
+      <AnchorPane fx:id="backgroundPane" prefHeight="727.0" prefWidth="818.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="727.0" layoutX="-2.0" stroke="BLACK" strokeType="INSIDE" width="826.0">
+               <fill>
+                  <LinearGradient endY="0.04433497536945813" startX="0.4285714285714286" startY="0.9901477832512315">
+                     <stops>
+                        <Stop color="#96b4d0" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <JFXTextField fx:id="txtName" focusColor="#3c5bb9" layoutX="179.0" layoutY="73.0" onAction="#txtNameOnAction" prefHeight="39.0" prefWidth="525.0" />
+            <Label layoutX="68.0" layoutY="79.0" prefHeight="27.0" prefWidth="82.0" text="Name  :">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtMessage" editable="false" layoutX="52.0" layoutY="643.0" onAction="#sendMessageOnKeyAction" prefHeight="53.0" prefWidth="525.0" />
+            <ScrollPane fx:id="scrollPane" blendMode="MULTIPLY" layoutX="55.0" layoutY="140.0" prefHeight="412.0" prefWidth="737.0">
+               <content>
+                  <VBox fx:id="vBox" alignment="TOP_CENTER" prefHeight="391.0" prefWidth="741.0" />
+               </content>
+            </ScrollPane>
+            <JFXButton fx:id="btnSendMessage" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="713.0" layoutY="645.0" onAction="#sendMessageOnAction" prefHeight="42.0" prefWidth="82.0">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assert/send-message.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnChooseImage" buttonType="RAISED" layoutX="638.0" layoutY="644.0" onAction="#btnChoseImgOnAction" prefHeight="44.0" prefWidth="39.0" text="Button" textFill="#cdc2c2">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="35.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../assert/videocall.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <ScrollPane fx:id="imojiScroll" layoutX="415.0" layoutY="433.0" prefHeight="200.0" prefWidth="227.0">
+               <content>
+                  <VBox fx:id="emojiVboxContainer" minHeight="196.0" minWidth="223.0" />
+               </content>
+            </ScrollPane>
+            <JFXButton buttonType="RAISED" layoutX="563.0" layoutY="644.0" onMouseClicked="#imghappyMoodOnMouseClick" prefHeight="44.0" prefWidth="20.0" text="Button" textFill="#cdc2c2">
+               <graphic>
+                  <ImageView fx:id="imghappyMood" fitHeight="32.0" fitWidth="35.0" onMouseClicked="#imghappyMoodOnMouseClick" pickOnBounds="true">
+                     <image>
+                        <Image url="@../assert/smile.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
